@@ -1,64 +1,42 @@
 name: personel_finance_manager
-description: "A powerful and enhanced Personal Finance Manager built with Flutter."
+description: "A new Flutter project."
 publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.6.1 <4.0.0'
+  sdk: '>=3.6.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  # Core Dependencies
   cupertino_icons: ^1.0.8
   provider: ^6.1.2
-  intl: ^0.19.0  # For date and currency formatting
-  pie_chart: ^5.3.2  # For visualizing financial data in charts
-  fl_chart: ^0.65.0  # For improved data visualization
-  shared_preferences: ^2.2.0  # For local storage and caching
-  path_provider: ^2.1.1  # For accessing system directories
-  sqflite: ^2.3.0  # For SQLite database management
-
-  # Enhanced Features
-  flutter_local_notifications: ^17.0.0  # For bill reminders and alerts
-  dio: ^5.4.1  # For API integration (like credit score or bank sync)
-  image_picker: ^1.0.7  # For uploading profile images or receipts
-  file_picker: ^6.1.1  # For importing/exporting PDF/Excel reports
-  google_fonts: ^6.1.0  # For better UI styling
-  fluttertoast: ^8.2.4  # For toast notifications
-  url_launcher: ^6.2.5  # For opening URLs directly from the app
-  camera: ^0.10.5+5  # For scanning receipts via OCR
-  flutter_launcher_icons: ^0.13.1  # For custom app icons
-  connectivity_plus: ^5.0.2  # For checking internet connection
-
-  # Security and Authentication
-  firebase_auth: ^4.18.0
-  google_sign_in: ^6.2.1
-  local_auth: ^2.1.8  # Biometric Authentication (Face ID, Fingerprint)
-  encrypt: ^5.0.3  # For enhanced data encryption
+  intl: ^0.19.0
+  path_provider: ^2.1.1
+  sqflite: ^2.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^3.0.1
 
 flutter:
   uses-material-design: true
 
   assets:
     - assets/images/
-    - assets/icons/
 
   fonts:
     - family: Quicksand
       fonts:
-        - asset: assets/fonts/Quicksand-Regular.ttf
-        - asset: assets/fonts/Quicksand-Bold.ttf
+        - asset: assets/fonts/Quicksand/static/Quicksand-Regular.ttf
+        - asset: assets/fonts/Quicksand/static/Quicksand-Bold.ttf
           weight: 700
-    - family: Rubik
-      fonts:
-        - asset: assets/fonts/Rubik-Regular.ttf
-        - asset: assets/fonts/Rubik-Bold.ttf
-          weight: 700
+        - asset: assets/fonts/Quicksand/static/Quicksand-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Quicksand/static/Quicksand-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf
+          weight: 600
