@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,31 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Font Test',
+      title: 'Personal Finance Manager',
       theme: ThemeData(
-        fontFamily: 'Quicksand', // Apply your custom font
-        primarySwatch: Colors.blue,
+        fontFamily: 'Quicksand',
+        primarySwatch: Colors.blueGrey,
       ),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Quicksand Font Test'),
-      ),
-      body: const Center(
-        child: Text(
-          'Hello, Stylish World!',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
+      home: WelcomePage(),
     );
   }
 }
