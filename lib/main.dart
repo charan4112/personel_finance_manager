@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
-// Pages
+// Page imports
 import 'pages/welcome_page.dart';
 import 'pages/auth/login_page.dart';
 import 'pages/auth/signup_page.dart';
-import 'pages/dashboard.dart';
-import 'pages/expense/expense_entry_page.dart'; // Newly added
+// You can replace this placeholder with the real dashboard when ready
+// import 'pages/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
 }
-//sharu
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -20,29 +18,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Personal Finance Manager',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Quicksand',
         primarySwatch: Colors.blueGrey,
-        scaffoldBackgroundColor: Colors.grey[100],
-        appBarTheme: AppBarTheme(
+        fontFamily: 'Quicksand',
+        appBarTheme: const AppBarTheme(
           backgroundColor: Colors.blueGrey,
-          titleTextStyle: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            color: Colors.white,
-            fontFamily: 'Quicksand',
+          foregroundColor: Colors.white,
+          elevation: 2,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blueGrey,
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           ),
-          iconTheme: IconThemeData(color: Colors.white),
         ),
       ),
-      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/': (context) => const WelcomePage(),
         '/login': (context) => const LoginPage(),
         '/signup': (context) => const SignupPage(),
-        '/dashboard': (context) => const Dashboard(),
-        '/add-expense': (context) => const ExpenseEntryPage(),
+        '/dashboard': (context) => const Placeholder(), // Replace with Dashboard later
       },
     );
   }
