@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-// Page imports
+// Import your screens
 import 'pages/welcome_page.dart';
 import 'pages/auth/login_page.dart';
 import 'pages/auth/signup_page.dart';
 import 'pages/dashboard.dart';
-import 'pages/expense/expense_entry_page.dart';
 import 'pages/income/income_entry_page.dart';
+import 'pages/income/income_history_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,10 +43,10 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginPage(),
         '/signup': (context) => const SignupPage(),
         '/dashboard': (context) => const Dashboard(),
-        '/add-expense': (context) => const ExpenseEntryPage(),
         '/add-income': (context) => const IncomeEntryPage(),
-        '/goal': (context) => const Placeholder(),   // to be implemented
-        '/reports': (context) => const Placeholder(), // to be implemented
+        '/income-history': (context) => const IncomeHistoryPage(),
+        '/goal': (context) => const Placeholder(), // Future implementation
+        '/reports': (context) => const Placeholder(), // Future implementation
       },
     );
   }
