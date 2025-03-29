@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'pages/welcome_page.dart';
 import 'pages/auth/login_page.dart';
 import 'pages/auth/signup_page.dart';
-import 'pages/dashboard.dart'; // ✅ Added Dashboard
+import 'pages/dashboard.dart';
+import 'pages/expense/expense_entry_page.dart';
+import 'pages/income/income_entry_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,8 +21,8 @@ class MyApp extends StatelessWidget {
       title: 'Personal Finance Manager',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
         fontFamily: 'Quicksand',
+        primarySwatch: Colors.blueGrey,
         scaffoldBackgroundColor: Colors.grey[100],
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.blueGrey,
@@ -40,12 +42,11 @@ class MyApp extends StatelessWidget {
         '/': (context) => const WelcomePage(),
         '/login': (context) => const LoginPage(),
         '/signup': (context) => const SignupPage(),
-        '/dashboard': (context) => const Dashboard(), // ✅ Dashboard wired
-        // Placeholders for upcoming routes
-        '/add-expense': (context) => const Placeholder(),
-        '/add-income': (context) => const Placeholder(),
-        '/goal': (context) => const Placeholder(),
-        '/reports': (context) => const Placeholder(),
+        '/dashboard': (context) => const Dashboard(),
+        '/add-expense': (context) => const ExpenseEntryPage(),
+        '/add-income': (context) => const IncomeEntryPage(),
+        '/goal': (context) => const Placeholder(),   // to be implemented
+        '/reports': (context) => const Placeholder(), // to be implemented
       },
     );
   }
